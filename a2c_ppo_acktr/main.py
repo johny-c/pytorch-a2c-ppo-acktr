@@ -10,16 +10,16 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from arguments import get_args
 from baselines.common.vec_env.dummy_vec_env import DummyVecEnv
 from baselines.common.vec_env.subproc_vec_env import SubprocVecEnv
 from baselines.common.vec_env.vec_normalize import VecNormalize
-from envs import make_env
-from model import Policy
-from storage import RolloutStorage
-from visualize import visdom_plot
 
-import algo
+from a2c_ppo_acktr.arguments import get_args
+from a2c_ppo_acktr.envs import make_env
+from a2c_ppo_acktr.model import Policy
+from a2c_ppo_acktr.storage import RolloutStorage
+from a2c_ppo_acktr.visualize import visdom_plot
+from a2c_ppo_acktr import algo
 
 args = get_args()
 
